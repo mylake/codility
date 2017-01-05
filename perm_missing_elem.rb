@@ -1,11 +1,8 @@
 require 'pry'
 
 def solution(source)
-  number = source.length + 1
-  sum = 0
-  source.each { |item| sum += item }
-  answer = (number * (number + 1)) / 2 - sum
-  answer
+  expected_array = [*1..source.size+1]
+  (expected_array - source).first
 end
 
 require 'minitest/autorun'
